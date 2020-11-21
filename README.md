@@ -1,6 +1,8 @@
 _todo: dockerizing dev and prod modes
 _
 
+**TODO: LAZY LOADING integration**
+
 !! image not centered. another assets is requested
 
 # React boilerplate on port 3000:

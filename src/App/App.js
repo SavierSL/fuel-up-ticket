@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch, useLocation } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ import LandingPage from '../Landing/Landing';
 import LoadingSimple from '../UI/LoadingSimple/LoadingSimple';
 
 // Routes and Layout for public/unauthorized user
-import ROUTES, { RenderRoutes } from '../publicRoutes';
 import PublicLayout from '../Layouts/Public/Layout';
+import StudentLayout from '../Layouts/Student/Layout';
 
 const App = ({ title }) => {
   // Get current location. if it's homepage =>  rendering landing
@@ -28,21 +28,12 @@ const App = ({ title }) => {
     );
   } else {
     // Switching layouts in accordance  user roles
-    //
 
-    const user = 'public';
+    const user = 'student';
 
-    layoutToDisplay = user === 'public' && (
-      <PublicLayout>
-        <RenderRoutes routes={ROUTES} />
-      </PublicLayout>
-    );
+    layoutToDisplay = user === 'student' && <StudentLayout />;
   }
-  return (
-    <div className={styles.Container}>
-      <Suspense fallback={LoadingSimple}>{layoutToDisplay}</Suspense>
-    </div>
-  );
+  return <div className={styles.Container}>{layoutToDisplay}</div>;
 };
 
 App.propTypes = {
