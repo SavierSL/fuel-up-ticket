@@ -13,6 +13,7 @@ const ROUTES = [
     path: '/ticket',
     key: 'TICKET',
     component: RenderRoutes,
+
     routes: [
       {
         path: '/ticket',
@@ -23,12 +24,15 @@ const ROUTES = [
     ],
   },
 ];
+
 function RouteWithSubRoutes(route) {
   return (
     <Route
       path={route.path}
       exact={route.exact}
-      render={(props) => <route.component {...props} routes={route.routes} />}
+      render={(props) => (
+        <route.component {...props} routes={route.routes} />
+      )}
     />
   );
 }
@@ -37,7 +41,17 @@ export function RenderRoutes({ routes }) {
   return (
     <Switch>
       {routes.map((route, i) => {
-        return <RouteWithSubRoutes key={route.key} {...route} />;
+        return (
+          <RouteWithSubRoutes key={route.key} {...route} />
+
+          // OR
+          // <Route
+          //   key={route.key}
+          //   path={route.path}
+          //   exact={route.exact}
+          //   render={() => <route.component routes={route.routes} />}
+          // />
+        );
       })}
       <Route component={() => <h1>Not Found!</h1>} />
     </Switch>
