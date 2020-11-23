@@ -1,0 +1,25 @@
+.Ticket {
+  width: 1280px;
+  height: 1250px;
+  padding: 30px 35px 36px 36px;
+  background-color: #faf9fe;
+
+  &__title {
+    h1 {
+      width: 107px;
+      height: 28px;
+      margin-left: 1.6rem;
+      font-family: Muli-Roman;
+      font-size: 22px;
+      font-weight: 800;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.27;
+      letter-spacing: normal;
+      text-align: left;
+      color: #190934;
+    }
+  }
+  &__buttons {
+  }
+}

@@ -1,0 +1,52 @@
+.ticket {
+  &__container {
+    width: 1209px;
+    height: 164px;
+    margin: 15px 0 12px;
+    padding: 11px 21px 29px 16px;
+    background-color: #ffffff;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 2.4rem;
+    }
+    p {
+      color: gray;
+    }
+  }
+  &__details {
+    font-size: 1.4rem;
+    margin: 0 80rem 2.2rem 0;
+    margin: 22px 161px 12px 2px;
+    font-family: Muli-Roman;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: left;
+    color: #190934;
+  }
+  &__status {
+    width: 83px;
+    height: 24px;
+    margin: 12px 14px 0 0;
+    padding: 2px 13px 4px 10px;
+    background-color: #2da231;
+    &-resolved {
+      width: 60px;
+      height: 18px;
+      font-family: Muli-Roman;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.29;
+      letter-spacing: normal;
+      text-align: left;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.NavBar {
+  padding: 3rem 3rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &Logo {
+  }
+  &Links {
+    ul {
+      li {
+        display: inline-block;
+        &:not(:last-child) {
+          margin-right: 4rem;
+        }
+      }
+    }
+  }
+}

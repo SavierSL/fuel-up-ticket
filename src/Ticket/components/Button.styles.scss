@@ -1,0 +1,15 @@
+.button {
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 13rem;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 2px #f16600;
+  background-color: #ffffff;
+  margin: 3rem 1rem 1.5rem 0;
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+  span {
+    margin-left: 1rem;
+  }
+}
